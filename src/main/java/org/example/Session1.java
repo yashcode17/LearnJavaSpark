@@ -44,16 +44,16 @@ public class Session1 {
         df.show();
 
         //Save data in to database
-        String dbConnectionUrl = "jdbc:mysql://localhost:3306/sparkProject";
+        String dbConnectionUrl = "jdbc:mysql://localhost:3306/LearnJavaSpark";
 
         Properties properties = new Properties();
         properties.setProperty("driver", "com.mysql.cj.jdbc.Driver");
         properties.setProperty("user", "root");          // ✅ correct key
-        properties.setProperty("password", "Yash@1234");
+        properties.setProperty("password", "");
 
         df.write()
                 .mode(SaveMode.Overwrite)
-                .jdbc(dbConnectionUrl, "spark_table", properties);
+                .jdbc(dbConnectionUrl, "Project1", properties);
 
     }
 }
